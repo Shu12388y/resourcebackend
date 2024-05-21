@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subresources",
+  "info": {
+    "singularName": "subresource",
+    "pluralName": "subresources",
+    "displayName": "subresource"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reources",
+  "info": {
+    "singularName": "reource",
+    "pluralName": "reources",
+    "displayName": "reource"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "Image": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "apiPath": {
+      "type": "string"
+    }
+  }
+}
