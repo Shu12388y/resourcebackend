@@ -788,6 +788,38 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiFeatureFeature extends Schema.CollectionType {
+  collectionName: 'features';
+  info: {
+    singularName: 'feature';
+    pluralName: 'features';
+    displayName: 'Feature';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    image: Attribute.Text;
+    link: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::feature.feature',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::feature.feature',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiReourceReource extends Schema.CollectionType {
   collectionName: 'reources';
   info: {
@@ -855,6 +887,70 @@ export interface ApiSubresourceSubresource extends Schema.CollectionType {
   };
 }
 
+export interface ApiWebdevWebdev extends Schema.CollectionType {
+  collectionName: 'webdevs';
+  info: {
+    singularName: 'webdev';
+    pluralName: 'webdevs';
+    displayName: 'webdev';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    image: Attribute.Text;
+    link: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::webdev.webdev',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::webdev.webdev',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiWevdevresourceWevdevresource extends Schema.CollectionType {
+  collectionName: 'wevdevresources';
+  info: {
+    singularName: 'wevdevresource';
+    pluralName: 'wevdevresources';
+    displayName: 'wevdevresource';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    image: Attribute.String;
+    url: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::wevdevresource.wevdevresource',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::wevdevresource.wevdevresource',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -873,8 +969,11 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::feature.feature': ApiFeatureFeature;
       'api::reource.reource': ApiReourceReource;
       'api::subresource.subresource': ApiSubresourceSubresource;
+      'api::webdev.webdev': ApiWebdevWebdev;
+      'api::wevdevresource.wevdevresource': ApiWevdevresourceWevdevresource;
     }
   }
 }

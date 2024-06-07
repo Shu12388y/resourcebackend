@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "webdevs",
+  "info": {
+    "singularName": "webdev",
+    "pluralName": "webdevs",
+    "displayName": "webdev"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "text"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}
